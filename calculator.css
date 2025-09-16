@@ -1,0 +1,79 @@
+/* Color Palette */
+:root {
+  --dark-red: #660000;
+  --red: #990033;
+  --wine: #5f021f;
+  --blood: #8c001a;
+  --orange: #ff9000;
+  --light-gray: #444;
+  --white: #f4f4f4;
+  --black: #111;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--wine);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: var(--black);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+}
+
+.display {
+  background: var(--black);
+  color: var(--white);
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  min-width: 220px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 8px;
+}
+
+.btn {
+  background: var(--light-gray);
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+
+.clear {
+  grid-column: span 2;
+  background: var(--red);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.operator {
+  background: var(--blood);
+}
+
+.equals {
+  grid-row: span 2;
+  background: var(--orange);
+  color: var(--black);
+}
